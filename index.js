@@ -67,47 +67,23 @@ c();
 console.log('');
 console.log('Example', 4);
 
-const o4 = {
-  d: () => {
-    console.log('d', this);
-  }
-};
-o4.d();
-
-const { d } = o4;
-d();
-
-
-
-////////////////
-// Example #5 //
-////////////////
-console.log('');
-console.log('Example', 5);
-
 class Ipsum {
   
-  e() {
+  d() {
+    console.log('d', this);
+  }
+
+  e = () => {
     console.log('e', this);
-  };
-
-  f = () => {
-    console.log('f', this);
-  };
-
-  g = (context) => {
-    console.log('g', this === context);
-  };
+  }
 
 }
 
-const o5 = new Ipsum();
-const { e, f, g } = o5;
-o5.e();
+const o4 = new Ipsum();
+const { d, e } = o4;
+o4.d();
+d();
+
+o4.e();
 e();
 
-o5.f();
-f();
-
-o5.g(o5);
-g(o5);

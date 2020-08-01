@@ -1,18 +1,18 @@
-////////////////
-// Example #1 //
-////////////////
-console.log('');
-console.log('Example', 1);
-
+// Example 1
+// declare function
 function a() {
   console.log('a', this);
 }
+
+// invoke function
 a();
 
+// assign as object property
 const o1 = {
   'a': a
 };
-// or shorter: const o1 = { a };
+
+// invoke function via the object
 o1.a();
 
 // alternatively
@@ -20,12 +20,7 @@ a.call(o1);
 
 
 
-////////////////
-// Example #2 //
-////////////////
-console.log('');
-console.log('Example', 2);
-
+// Example 2
 const o2 = {
   b() {
     console.log('b', this);
@@ -33,21 +28,12 @@ const o2 = {
 };
 o2.b();
 
-const b = o2.b; // or with deconstruct: const { b } = o2;
+const b = o2.b;
 b();
 
 
 
-// Arrow functions //
-
-
-
-////////////////
-// Example #3 //
-////////////////
-console.log('');
-console.log('Example', 3);
-
+// Example 3
 const o3 = {
   c() {
     const _c = () => console.log('c', this);
@@ -61,12 +47,7 @@ c();
 
 
 
-////////////////
-// Example #4 //
-////////////////
-console.log('');
-console.log('Example', 4);
-
+// Example 4
 class Ipsum {
   
   d() {
@@ -86,4 +67,3 @@ d();
 
 o4.e();
 e();
-

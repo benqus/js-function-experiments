@@ -18,3 +18,5 @@ d();
 
 o4.e();
 e();
+
+e.call(window);
